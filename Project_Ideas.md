@@ -1,5 +1,5 @@
 # Social Data Science Project Ideas
-##Daniel Kwasnitschka, Florian Ettinger, Priyanka Chaudhary
+## Daniel Kwasnitschka, Florian Ettinger, Priyanka Chaudhary
 
 1. Sentiment about Joe Biden and income and educational level (comparing it with the results of the group from last year)
 2. Linking Social Impact of a CEO with the popularity of the respective company
