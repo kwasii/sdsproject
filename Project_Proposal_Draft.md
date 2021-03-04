@@ -4,6 +4,8 @@ Twitter has long been one of the biggest social media platforms worldwide. Altho
 
 The goal of this project is to answer the question if people living in areas of higher income and better education have a more positive sentiment towards Joe Biden compared to people residing in regions of lower income and less education. Our hypothesis is that there is a positive relationship between education/income and the sentiment towards Joe Biden. 
 
+After we perform our sentiment analysis and tested our hypothesis, we also want to use the election results to analyse if we can observe a higher correlation between the election results and the sentiment towards Joe Biden in certain areas compared to just using corelation of education/income and election results. Especially for this election where many voter's motivation was to vote against Donald Trump and not for Joe Biden we can expect interesting results.
+
 ## Project Plan
 1.	Download recent tweets about Joe Biden
 2.	Analyse the twitter data using sentiment analyses (e.g., VADER)
