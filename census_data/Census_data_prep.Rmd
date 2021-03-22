@@ -1,0 +1,71 @@
+---
+title: "census_data"
+author: "Dario"
+date: "3/19/2021"
+output: html_document
+---
+
+## Census data preparation
+
+Source: U.S. Census Bureau, 2015-2019 American Community Survey 5-Year Estimates
+
+Raw data shows median earnings in the past 12 months (in 2019, inflation-adjusted dollars) by sex and by educational attainment for the population 25 years and over.
+
+```{r}
+raw_data <- read.csv("ACSDT5Y2019.B20004_data_with_overlays_2021-03-18T142834.csv", skip = 1, header = TRUE, sep = ",", quote = "\"", stringsAsFactors = FALSE)
+head(raw_data)
+```
+**Rows 16 to 38 not needed for our task -> delete**
+```{r}
+data <- raw_data[,-c(15:38),drop=FALSE]
+data <- raw_data[,-1,drop=FALSE]
+
+head(data)
+```
+**cleaning zip code**
+```{r}
+colnames(data)[1]  <- "zip"
+data$zip <- gsub("ZCTA5 ","",data$zip)
+head(data)
+```
+
+Explanation of Symbols:
+
+  - "**" in margin of error: indicates that either no sample observations or too few sample observations were        available
+  - "-" entry in the estimate: indicates that either no sample observations or too few sample observations were        available to compute an estimate, or a ratio of medians cannot be calculated because one or both of the          median estimates falls in the lowest interval or upper interval of an open-ended distribution, or the            margin of error associated with a median was larger than the median itself.
+  - "-" following a median estimate means the median falls in the lowest interval of an open-ended distribution.
+  - "+" following a median estimate means the median falls in the upper interval of an open-ended distribution.
+  - "***" entry in the margin of error: indicates that the median falls in the lowest interval or upper interval     of an open-ended distribution.
+  - "*****" entry in the margin of error column indicates that the estimate is controlled.
+  - "N" entry in the estimate and margin of error columns indicates that data for this geographic area cannot be     displayed because the number of sample cases is too small.
+  - "(X)" means that the estimate is not applicable or not available.
+
+
+**turn symbols to NA for easier handling**
+```{r}
+#couldn't figure out one-liner
+data[ data == "-" ] <- NA
+data[ data == "**" ] <- NA
+data[ data == "+" ] <- NA
+data[ data == "***" ] <- NA
+data[ data == "*****" ] <- NA
+data[ data == "N" ] <- NA
+data[ data == "X" ] <- NA
+head(data)
+```
+
+**data frame without NA values - omit rows containing one NA or more**
+```{r}
+data_lean <- data[complete.cases(data),]
+head(data_lean)
+```
+**check how much left**
+```{r}
+nrow(data)
+nrow(data_lean)
+nrow(data_lean)/nrow(data)
+```
+
+
+
+
