@@ -26,7 +26,7 @@ library(ggmap)
 
 
 ```{r}
-biden_tweets3 <- search_tweets(q ="biden OR joebiden", lang = "en" , geocode = lookup_coords("usa"), n = 100000, include_rts = FALSE, retryonratelimit = TRUE, max_id = "1372833255230148608")
+biden_tweets3 <- search_tweets(q ="biden OR joebiden", lang = "en" , geocode = lookup_coords("usa"), n = 300000, include_rts = FALSE, retryonratelimit = TRUE)
 
 biden_tweets3 <- lat_lng(biden_tweets3)
 ```
