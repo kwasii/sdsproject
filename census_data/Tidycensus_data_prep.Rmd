@@ -1,0 +1,66 @@
+---
+title: "Tidycensus_data_prep"
+author: "Dario"
+date: "3/31/2021"
+output: html_document
+---
+## Install packages 
+
+```{r cars}
+install.packages("githubinstall")
+library(githubinstall)
+githubinstall("tidycensus")
+install.packages(tidyverse)
+```
+
+## Load Packages
+
+```{r}
+library(tidycensus)
+library(tidyverse)
+```
+```{r}
+census_api_key("f546cab669d39b586c2d8d823eb75d9bea4c7668", install = TRUE)
+```
+
+## Look up variables
+
+```{r}
+acs5_vars <- load_variables(2019,"acs5",cache=TRUE)
+View(acs5_vars)
+```
+
+B19013_001: Median houshold income past 12 months (inflation adjusted)
+
+B20004_001 : Median earnings past 12 months (inflation adjusted)
+
+B06011_001 : Median estimated income past 12 months (inflation adjusted)
+
+B06009_001: place of birth by educational income (total eg. number for place of birth?) 
+
+## Load data
+
+```{r}
+incm_zip <- get_acs(geography = "zcta", variables = "B06011_001", year = 2019)
+incm_state<- get_acs(geography = "state", variables = "B06011_001", year = 2019)
+head(incm_zip)
+head(incm_state)
+```
+
+
+## Clean data in best way for merge with twitter data
+
+  - NA values still in table
+  - yet to do....
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
