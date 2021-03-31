@@ -17,9 +17,9 @@ head(raw_data)
 ```
 **Rows 16 to 38 not needed for our task -> delete**
 ```{r}
-data <- raw_data[,-c(15:38),drop=FALSE]
-data <- raw_data[,-1,drop=FALSE]
-
+data <- raw_data
+data[,(15:38)] <- NULL
+data[,1]<-NULL
 head(data)
 ```
 **cleaning zip code**
@@ -53,17 +53,23 @@ data[ data == "N" ] <- NA
 data[ data == "X" ] <- NA
 head(data)
 ```
+```{r}
+data_ziptotal= data
+data_ziptotal[,4:14]<-NULL
+head(data_ziptotal)
+```
+
 
 **data frame without NA values - omit rows containing one NA or more**
 ```{r}
-data_lean <- data[complete.cases(data),]
+data_lean <- data_ziptotal[complete.cases(data_ziptotal),]
 head(data_lean)
 ```
 **check how much left**
 ```{r}
-nrow(data)
+nrow(data_ziptotal)
 nrow(data_lean)
-nrow(data_lean)/nrow(data)
+nrow(data_lean)/nrow(data_ziptotal)
 ```
 
 
