@@ -38,13 +38,20 @@ B06011_001 : Median estimated income past 12 months (inflation adjusted)
 
 B06009_001: place of birth by educational income (total eg. number for place of birth?) 
 
+B15003_022: Estimate!!Total:!!Bachelor's degree: EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER
+
+
 ## Load data
 
 ```{r}
 incm_zip <- get_acs(geography = "zcta", variables = "B06011_001", year = 2019)
 incm_state<- get_acs(geography = "state", variables = "B06011_001", year = 2019)
+edu_zip <- get_acs(geography = "zcta", variables = "B15003_022", year = 2019)
+edu_state<- get_acs(geography = "state", variables = "B15003_022", year = 2019)
 head(incm_zip)
 head(incm_state)
+head(edu_state)
+head(edu_zip)
 ```
 
 
