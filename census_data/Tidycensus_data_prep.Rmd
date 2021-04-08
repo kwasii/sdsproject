@@ -40,18 +40,24 @@ B06009_001: place of birth by educational income (total eg. number for place of 
 
 B15003_022: Estimate!!Total:!!Bachelor's degree: EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER
 
+B15003_017: Estimate!!Total:!!Regular high school diploma: EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER
+
+B15003_023: Estimate!!Total:!!Master's degree : EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER
 
 ## Load data
 
 ```{r}
 incm_zip <- get_acs(geography = "zcta", variables = "B06011_001", year = 2019)
 incm_state<- get_acs(geography = "state", variables = "B06011_001", year = 2019)
-edu_zip <- get_acs(geography = "zcta", variables = "B15003_022", year = 2019)
-edu_state<- get_acs(geography = "state", variables = "B15003_022", year = 2019)
-head(incm_zip)
-head(incm_state)
-head(edu_state)
-head(edu_zip)
+edu_high_zip <- get_acs(geography = "zcta", variables = "B15003_017", year = 2019)
+edu_high_state<- get_acs(geography = "state", variables = "B15003_017", year = 2019)
+edu_bachelor_zip <- get_acs(geography = "zcta", variables = "B15003_022", year = 2019)
+edu_bachelor_state<- get_acs(geography = "state", variables = "B15003_022", year = 2019)
+edu_master_zip <- get_acs(geography = "zcta", variables = "B15003_023", year = 2019)
+edu_master_state<- get_acs(geography = "state", variables = "B15003_023", year = 2019)
+
+head(edu_master_state)
+head(edu_high_state)
 ```
 
 
