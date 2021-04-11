@@ -1,0 +1,185 @@
+
+Confusion Matrix Results as Mean score as Reference or ground truth:
+
+VADER
+Accuracy: 0.4435484
+Precision of Positive class:  0.28
+Recall of Positive class: 0.2916667
+Precision of Negative class: 0.75
+Recall of Negative class: 0.3181818
+
+----------------------------------------------------------------------------------------
+Confusion Matrix and Statistics
+
+          Reference
+Prediction Negative Neutral Positive
+  Negative       21       1        6
+  Neutral        33      27       11
+  Positive       12       6        7
+
+Overall Statistics
+                                          
+               Accuracy : 0.4435          
+                 95% CI : (0.3544, 0.5355)
+    No Information Rate : 0.5323          
+    P-Value [Acc > NIR] : 0.9807          
+                                          
+                  Kappa : 0.1862          
+                                          
+ Mcnemar's Test P-Value : 2.42e-07        
+
+Statistics by Class:
+
+                     Class: Negative Class: Neutral Class: Positive
+Sensitivity                   0.3182         0.7941         0.29167
+Specificity                   0.8793         0.5111         0.82000
+Pos Pred Value                0.7500         0.3803         0.28000
+Neg Pred Value                0.5312         0.8679         0.82828
+Prevalence                    0.5323         0.2742         0.19355
+Detection Rate                0.1694         0.2177         0.05645
+Detection Prevalence          0.2258         0.5726         0.20161
+Balanced Accuracy             0.5987         0.6526         0.55583
+-------------------------------------------------------------------------------------------
+
+
+Syuzhet
+
+Accuracy:  0.4677419
+Precision of Positive class:  0.3235294
+Recall of Positive class: 0.4583333
+Precision of Negative class: 0.6976744
+Recall of Negative class: 0.4545455
+
+-------------------------------------------------------------------------------------------
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction Negative Neutral Positive
+  Negative       30       4        9
+  Neutral        26      17        4
+  Positive       10      13       11
+
+Overall Statistics
+                                          
+               Accuracy : 0.4677          
+                 95% CI : (0.3776, 0.5594)
+    No Information Rate : 0.5323          
+    P-Value [Acc > NIR] : 0.9368202       
+                                          
+                  Kappa : 0.1916          
+                                          
+ Mcnemar's Test P-Value : 0.0001078       
+
+Statistics by Class:
+
+                     Class: Negative Class: Neutral Class: Positive
+Sensitivity                   0.4545         0.5000         0.45833
+Specificity                   0.7759         0.6667         0.77000
+Pos Pred Value                0.6977         0.3617         0.32353
+Neg Pred Value                0.5556         0.7792         0.85556
+Prevalence                    0.5323         0.2742         0.19355
+Detection Rate                0.2419         0.1371         0.08871
+Detection Prevalence          0.3468         0.3790         0.27419
+Balanced Accuracy             0.6152         0.5833         0.61417
+
+--------------------------------------------------------------------------------------------
+
+
+
+##########################################################################################################
+##########################################################################################################
+
+Confusion Matrix Results as Majority choice as Reference or ground truth:
+
+
+
+VADER
+Accuracy: 0.4274194
+Precision of Positive class:   0.24
+Recall of Positive class: 0.2727273
+Precision of Negative class:  0.75
+Recall of Negative class: 0.3043478
+
+--------------------------------------------------------------------------------------------------
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction Negative Neutral Positive
+  Negative       20       2        6
+  Neutral        33      27       11
+  Positive       13       6        6
+
+Overall Statistics
+                                         
+               Accuracy : 0.4274         
+                 95% CI : (0.339, 0.5194)
+    No Information Rate : 0.5323         
+    P-Value [Acc > NIR] : 0.9924         
+                                         
+                  Kappa : 0.159          
+                                         
+ Mcnemar's Test P-Value : 6.649e-07      
+
+Statistics by Class:
+
+                     Class: Negative Class: Neutral Class: Positive
+Sensitivity                   0.3030         0.7714         0.26087
+Specificity                   0.8621         0.5056         0.81188
+Pos Pred Value                0.7143         0.3803         0.24000
+Neg Pred Value                0.5208         0.8491         0.82828
+Prevalence                    0.5323         0.2823         0.18548
+Detection Rate                0.1613         0.2177         0.04839
+Detection Prevalence          0.2258         0.5726         0.20161
+Balanced Accuracy             0.5825         0.6385         0.53638
+
+----------------------------------------------------------------------------------------------
+
+
+
+Syuzhet
+
+Accuracy:  0.4435484
+Precision of Positive class: 0.2941176
+Recall of Positive class: 0.4545455
+Precision of Negative class: 0.6976744
+Recall of Negative class:  0.4347826
+
+-------------------------------------------------------------------------------------------------
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction Negative Neutral Positive
+  Negative       30       5        8
+  Neutral        25      17        5
+  Positive       11      13       10
+
+Overall Statistics
+                                          
+               Accuracy : 0.4597          
+                 95% CI : (0.3699, 0.5515)
+    No Information Rate : 0.5323          
+    P-Value [Acc > NIR] : 0.9562096       
+                                          
+                  Kappa : 0.1783          
+                                          
+ Mcnemar's Test P-Value : 0.0005952       
+
+Statistics by Class:
+
+                     Class: Negative Class: Neutral Class: Positive
+Sensitivity                   0.4545         0.4857         0.43478
+Specificity                   0.7759         0.6629         0.76238
+Pos Pred Value                0.6977         0.3617         0.29412
+Neg Pred Value                0.5556         0.7662         0.85556
+Prevalence                    0.5323         0.2823         0.18548
+Detection Rate                0.2419         0.1371         0.08065
+Detection Prevalence          0.3468         0.3790         0.27419
+Balanced Accuracy             0.6152         0.5743         0.59858
+
+--------------------------------------------------------------------------------------------------
+
+
+
